@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRACTAL Engine | Academic FinOps & SRE Advisory</title>
+  <style>
+/* ==========================================================================
+   HIGH-END B2B FINOPS ARCHITECTURE DESIGN SYSTEM
+   Strict Monochrome & Grayscale (Black, White, Charcoal, Slate)
+   Zero Purple | Zero Colors | Custom Advanced Switches | Sleek Micro-Interactions
+   ========================================================================== */
+
+:root {
+  --bg-canvas: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f9fafb;
+  --bg-hover: #f3f4f6;
+  --bg-active: #e5e7eb;
+  --bg-dark: #0a0a0a;
+
+  --border-subtle: #e5e7eb;
+  --border-medium: #d1d5db;
+  --border-dark: #0a0a0a;
+
+  --text-primary: #0a0a0a;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-inverse: #ffffff;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Consolas, Menlo, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.22s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* --------------------------------------------------------------------------
+   Top Navigation Bar (Sleek High-Contrast)
+   -------------------------------------------------------------------------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 14px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.brand-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  border-radius: var(--radius-xs);
+}
+
+.brand-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.brand-name span {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.nav-tools {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.region-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+}
+
+.region-picker select {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--text-primary);
+  outline: none;
+  cursor: pointer;
+}
+
+.rtt-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-medium);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+}
+
+.btn-nav {
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+  border: 1px solid var(--bg-dark);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-nav:hover {
+  background: #262626;
+  border-color: #262626;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section (Executive Presentation)
+   -------------------------------------------------------------------------- */
+.hero-container {
+  max-width: 1360px;
+  margin: 36px auto 28px;
+  padding: 0 40px;
+}
+
+.hero-pill-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 14px;
+  color: var(--text-secondary);
+}
+
+.hero-headline {
+  font-size: 2.35rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.hero-lead {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 860px;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
+/* Stat Highlights Bar */
+.highlights-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.highlight-caption {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.highlight-value {
+  font-family: var(--font-mono);
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Workspace Layout (Interactive Split)
+   -------------------------------------------------------------------------- */
+.workspace-wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.95fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* Card Containers */
+.card-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.card-panel:hover {
+  border-color: var(--border-medium);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 22px;
+}
+
+.panel-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.step-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+}
+
+.panel-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.panel-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Form Controls: Polished Range Sliders & Numeric Inputs
+   -------------------------------------------------------------------------- */
+.input-block {
+  margin-bottom: 22px;
+}
+
+.input-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.input-label-text {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.input-val-badge {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+}
+
+/* Custom Sleek Range Slider */
+input[type="range"].custom-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--border-subtle);
+  outline: none;
+  cursor: pointer;
+  margin: 6px 0;
+}
+
+input[type="range"].custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg-dark);
+  border: 2px solid var(--bg-surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+input[type="range"].custom-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+}
+
+.slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Grid Matrix for Hardware Inputs */
+.hardware-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.matrix-cell {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cell-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.cell-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cell-input {
+  width: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.cell-input:focus {
+  border-color: var(--border-dark);
+}
+
+.cell-unit {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Segmented Control for SLA Tiers */
+.sla-segmented-control {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.sla-segment {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: all var(--transition-fast);
+}
+
+.sla-segment:hover {
+  border-color: var(--border-medium);
+  background: var(--bg-hover);
+}
+
+.sla-segment.selected {
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.segment-name {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.segment-sla {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+/* Derived SRE Calculations Ribbon */
+.derived-ribbon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-top: 22px;
+}
+
+.derived-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.derived-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #a3a3a3;
+  text-transform: uppercase;
+}
+
+.derived-val {
+  font-family: var(--font-mono);
+  font-size: 1.18rem;
+  font-weight: 800;
+}
+
+/* --------------------------------------------------------------------------
+   Step 2: Algorithmic Synthesis & Stress Audit Panel
+   -------------------------------------------------------------------------- */
+.synthesis-banner {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--border-dark);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+
+.synthesis-rule-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.synthesis-formula-text {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* Stress Test Tool Strip */
+.audit-tool-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  margin-bottom: 20px;
+}
+
+.audit-tool-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.btn-tool-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-pill-subtle {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-pill-subtle:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-dark);
+}
+
+.btn-pill-dark {
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+  border: 1px solid var(--bg-dark);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-pill-dark:hover {
+  background: #262626;
+}
+
+/* Instance Selector Dropdown & Specs */
+.instance-select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.instance-select-container select {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  outline: none;
+  cursor: pointer;
+}
+
+.instance-specs-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.spec-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Step 3: Strategic Companion Services (Advanced Switches & Accordions)
+   -------------------------------------------------------------------------- */
+.services-deck {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.service-card-item {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  transition: all var(--transition-fast);
+  overflow: hidden;
+}
+
+.service-card-item:hover {
+  border-color: var(--border-medium);
+}
+
+.service-card-item.active {
+  border-color: var(--border-dark);
+}
+
+.service-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.service-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.service-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.service-title-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.service-subhead-pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+  text-transform: uppercase;
+}
+
+.service-synopsis {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  max-width: 580px;
+}
+
+/* Advanced Custom Toggle Switch (Linear/iOS Style) */
+.switch-control {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.switch-control input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-track {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-medium);
+  transition: all var(--transition-normal);
+  border-radius: var(--radius-full);
+}
+
+.switch-track:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--bg-surface);
+  transition: all var(--transition-normal);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.switch-control input:checked + .switch-track {
+  background-color: var(--bg-dark);
+}
+
+.switch-control input:checked + .switch-track:before {
+  transform: translateX(20px);
+}
+
+/* Accordion Trigger for Detailed Proofs */
+.accordion-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: var(--bg-subtle);
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  padding: 8px 20px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.accordion-toggle-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.accordion-arrow {
+  transition: transform var(--transition-fast);
+  font-size: 0.75rem;
+}
+
+.service-card-item.expanded .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-details-body {
+  display: none;
+  background: var(--bg-subtle);
+  padding: 14px 20px 18px;
+  border-top: 1px dashed var(--border-subtle);
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  font-size: 0.8rem;
+}
+
+.service-card-item.expanded .accordion-details-body {
+  display: grid;
+}
+
+.detail-clause {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.clause-header {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+}
+
+.clause-text {
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: Sticky Financial & TCO Ledger
+   -------------------------------------------------------------------------- */
+.sticky-column {
+  position: sticky;
+  top: 86px;
+}
+
+/* Audit Hazard Card */
+.audit-alert-panel {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  background: var(--bg-surface);
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.audit-alert-panel.has-deficit {
+  border: 1.5px solid var(--border-dark);
+  background: var(--bg-subtle);
+}
+
+.audit-top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.audit-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.audit-code-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-medium);
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+}
+
+.audit-title {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.audit-details-text {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.btn-enforce-optimal {
+  width: 100%;
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.btn-enforce-optimal:hover {
+  background: #262626;
+}
+
+/* TCO Financial Ledger */
+.tco-ledger-card {
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  padding: 26px;
+  box-shadow: var(--shadow-md);
+}
+
+.ledger-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 20px;
+}
+
+.ledger-heading {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.ledger-curr-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Segmented Tab Controls */
+.time-segmented-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  margin-bottom: 22px;
+}
+
+.time-segment-btn {
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-xs);
+  padding: 7px 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.time-segment-btn.active {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Price Big Display */
+.price-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.price-digits-row {
+  display: flex;
+  align-items: baseline;
+}
+
+.price-currency {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+.price-big-number {
+  font-family: var(--font-mono);
+  font-size: 3.4rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+}
+
+.price-sub-caption {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: -4px;
+}
+
+/* Savings Plan Card */
+.savings-callout {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  margin: 18px 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.savings-plan-line {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.savings-plan-line strong {
+  font-weight: 800;
+}
+
+.savings-delta-line {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+}
+
+/* Stacked Allocation Bar */
+.allocation-breakdown-box {
+  margin-top: 20px;
+}
+
+.allocation-heading {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.stacked-track {
+  display: flex;
+  height: 8px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 14px;
+}
+
+.seg-compute { background: #0a0a0a; }
+.seg-storage { background: #404040; }
+.seg-network { background: #737373; }
+.seg-services { background: #a3a3a3; }
+
+.legend-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.legend-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legend-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+}
+
+.marker {
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+}
+
+.marker-compute { background: #0a0a0a; }
+.marker-storage { background: #404040; }
+.marker-network { background: #737373; }
+.marker-services { background: #a3a3a3; }
+
+/* Itemized Modules List */
+.itemized-breakdown-box {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.itemized-caption {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.itemized-rows {
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.itemized-rows li {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3px;
+  border-bottom: 1px dashed var(--border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   Modal Window (Terraform Manifest)
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg);
+  max-width: 840px;
+  width: 100%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-modal);
+}
+
+.modal-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 26px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.modal-box-header h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.modal-box-body {
+  padding: 20px 26px;
+  overflow-y: auto;
+}
+
+.modal-box-body pre {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  overflow-x: auto;
+}
+
+.modal-box-footer {
+  padding: 14px 26px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adaptations
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .workspace-wrapper {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  .sticky-column {
+    position: static;
+  }
+  .top-nav {
+    padding: 14px 20px;
+  }
+  .hero-container {
+    padding: 0 20px;
+  }
+  .highlights-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="nav-brand">
+      <span class="brand-symbol">F</span>
+      <div class="brand-name">FRACTAL Engine</div>
+    </div>
+
+    <div class="nav-tools">
+      <div class="region-picker">
+        <label for="regionSelect">Region:</label>
+        <select id="regionSelect">
+          <option value="eu-central-1" selected>Frankfurt (eu-central-1)</option>
+          <option value="eu-west-1">Ireland (eu-west-1)</option>
+          <option value="us-east-1">N. Virginia (us-east-1)</option>
+          <option value="us-west-2">Oregon (us-west-2)</option>
+          <option value="ap-northeast-1">Tokyo (ap-northeast-1)</option>
+        </select>
+        <span id="latencyBadge" class="rtt-badge">RTT 18 ms</span>
+      </div>
+      <button id="btnExportTf" class="btn-nav">Export Terraform HCL</button>
+    </div>
+  </header>
+
+  <!-- Hero Briefing -->
+  <section class="hero-container">
+    <span class="hero-pill-tag">Academic SRE Framework / Deterministic FinOps</span>
+    <h1 class="hero-headline">Empirical Cloud Sizing & SRE Migration Architecture</h1>
+    <p class="hero-lead">Eliminate speculative cloud sizing. Ingest verified production telemetry (P95 dynamic throughput, working set memory, legacy CPU saturation, and database TPS) to deterministically synthesize resilient AWS topologies, eliminate burstable SLA liabilities, and forecast multi-horizon expenditure.</p>
+
+    <!-- Highlights Strip -->
+    <div class="highlights-strip">
+      <div class="highlight-item">
+        <span class="highlight-caption">Algorithmic Principle</span>
+        <span class="highlight-value">Formulas &gt; Guesswork</span>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-caption">SLA Reliability</span>
+        <span class="highlight-value">Zero Burst Debt</span>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-caption">Architectural Layers</span>
+        <span class="highlight-value">8 Strategic Modules</span>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-caption">Forecasting Horizon</span>
+        <span class="highlight-value">1w &bull; 2w &bull; 1m &bull; 3m</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Workspace -->
+  <main class="workspace-wrapper">
+    <!-- Left Column: Input Telemetry & Prescriptions -->
+    <div class="workspace-main">
+      <!-- Step 1: Telemetry Intake Panel -->
+      <div class="card-panel">
+        <div class="panel-header">
+          <div class="panel-title-wrap">
+            <span class="step-indicator">1</span>
+            <h3 class="panel-title">Production Systems Telemetry (Pre-Cloud SRE Baseline)</h3>
+          </div>
+          <span class="panel-subtitle">Observable Telemetry Inputs</span>
+        </div>
+
+        <!-- Metric 1: P95 Dynamic RPS Slider -->
+        <div class="input-block">
+          <div class="input-label-row">
+            <span class="input-label-text">95th Percentile Dynamic Throughput (P95 RPS):</span>
+            <span id="rpsDisplay" class="input-val-badge">450 req/s</span>
+          </div>
+          <input type="range" id="rpsSlider" class="custom-slider" min="20" max="3000" step="10" value="450">
+          <div class="slider-ticks">
+            <span>20 RPS</span>
+            <span>450 RPS (Sustained Campaign)</span>
+            <span>1,500 RPS</span>
+            <span>3,000+ RPS</span>
+          </div>
+        </div>
+
+        <!-- Metric 2: Concurrency Sessions Slider -->
+        <div class="input-block">
+          <div class="input-label-row">
+            <span class="input-label-text">Peak Concurrent HTTP &amp; WebSocket Sessions:</span>
+            <span id="sessionsDisplay" class="input-val-badge">850 active</span>
+          </div>
+          <input type="range" id="sessionsSlider" class="custom-slider" min="50" max="10000" step="50" value="850">
+          <div class="slider-ticks">
+            <span>50 Sessions</span>
+            <span>850 Sessions</span>
+            <span>5,000 Sessions</span>
+            <span>10,000 Sessions</span>
+          </div>
+        </div>
+
+        <!-- Hardware Matrix -->
+        <div class="hardware-matrix">
+          <div class="matrix-cell">
+            <span class="cell-label">Working Set Memory Footprint:</span>
+            <div class="cell-input-row">
+              <input type="number" id="inputMem" class="cell-input" value="12" min="1" max="256">
+              <span class="cell-unit">GB RAM</span>
+            </div>
+          </div>
+
+          <div class="matrix-cell">
+            <span class="cell-label">Database Transaction Write Rate:</span>
+            <div class="cell-input-row">
+              <input type="number" id="inputDbTps" class="cell-input" value="180" min="0" max="5000">
+              <span class="cell-unit">TPS</span>
+            </div>
+          </div>
+
+          <div class="matrix-cell">
+            <span class="cell-label">Legacy Physical Server Baseline:</span>
+            <div class="cell-input-row">
+              <input type="number" id="inputLegacyCores" class="cell-input" value="4" min="1" max="64">
+              <span class="cell-unit">Cores</span>
+            </div>
+          </div>
+
+          <div class="matrix-cell">
+            <span class="cell-label">Monthly Network Data Egress:</span>
+            <div class="cell-input-row">
+              <input type="number" id="inputEgressTb" class="cell-input" value="2.5" min="0.1" max="500" step="0.5">
+              <span class="cell-unit">TB / mo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLA Segmented Control -->
+        <div style="margin-top: 20px;">
+          <span class="input-label-text">Target Service Availability &amp; SLA Commitment:</span>
+          <div class="sla-segmented-control" id="slaTierGroup">
+            <div class="sla-segment selected" data-tier="mission_critical">
+              <span class="segment-name">Mission-Critical</span>
+              <span class="segment-sla">99.99% SLA (Multi-AZ)</span>
+            </div>
+            <div class="sla-segment" data-tier="production">
+              <span class="segment-name">Production Standard</span>
+              <span class="segment-sla">99.9% SLA (Standard)</span>
+            </div>
+            <div class="sla-segment" data-tier="non_prod">
+              <span class="segment-name">Development / Batch</span>
+              <span class="segment-sla">99.0% SLA (Single-AZ)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Derived SRE Calculations Ribbon -->
+        <div class="derived-ribbon">
+          <div class="derived-item">
+            <span class="derived-label">Derived Dedicated Cores</span>
+            <span id="valComputedVcpu" class="derived-val">4 Cores</span>
+          </div>
+          <div class="derived-item">
+            <span class="derived-label">Operational RAM Working Set</span>
+            <span id="valComputedRam" class="derived-val">19 GB</span>
+          </div>
+          <div class="derived-item">
+            <span class="derived-label">Burstable Allocation Status</span>
+            <span id="valBurstableStatus" class="derived-val">Prohibited</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Algorithmic Compute Sizing & Stress Audit -->
+      <div class="card-panel">
+        <div class="panel-header">
+          <div class="panel-title-wrap">
+            <span class="step-indicator">2</span>
+            <h3 class="panel-title">Deterministic Compute Sizing &amp; Stress Audit</h3>
+          </div>
+          <span class="panel-subtitle">Mathematical Proof vs Override</span>
+        </div>
+
+        <!-- Synthesis Rule Formula Banner -->
+        <div class="synthesis-banner">
+          <div class="synthesis-rule-tag">Synthesis Mathematical Formulation:</div>
+          <div id="synthesisExplanation" class="synthesis-formula-text">
+            vCPU = ceil(P95_RPS / 125). Operational RAM = (Working_Set * 1.25) + (Concurrent_Sessions * 4MB). Burstable compute allocation strictly prohibited under SLA 99.99%.
+          </div>
+        </div>
+
+        <!-- Stress Test Tool Strip -->
+        <div class="audit-tool-strip">
+          <span class="audit-tool-label">Stress-Test Under-Provisioned SKU vs Prescribed:</span>
+          <div class="btn-tool-group">
+            <button id="btnSimulateT3" class="btn-pill-subtle">Audit t3.micro ($7/mo)</button>
+            <button id="btnEnforcePrescribed" class="btn-pill-dark">Prescribe Optimal Tier</button>
+          </div>
+        </div>
+
+        <!-- Instance Select & Specs -->
+        <div class="instance-select-container">
+          <select id="instanceSelect">
+            <!-- Populated via API -->
+          </select>
+          <div id="instanceSpecsBar" class="instance-specs-pills">
+            <!-- Filled via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Strategic Companion Services (Advanced Switches & Accordions) -->
+      <div class="card-panel">
+        <div class="panel-header">
+          <div class="panel-title-wrap">
+            <span class="step-indicator">3</span>
+            <h3 class="panel-title">Strategic Companion Architectural Layers</h3>
+          </div>
+          <span class="panel-subtitle">Technical Proofs &amp; SLA Resilience</span>
+        </div>
+
+        <div class="services-deck" id="servicesCatalog">
+          <!-- 1. ALB -->
+          <div class="service-card-item active" id="cardAlb">
+            <div class="service-header-bar">
+              <div class="service-identity">
+                <div class="service-title-row">
+                  <span class="service-title-text">Application Load Balancer (ALB)</span>
+                  <span class="service-subhead-pill">TLS 1.3 Asymmetric Offload</span>
+                </div>
+                <p class="service-synopsis">Multi-zone ingress traffic distribution and cryptographic SSL/TLS handshake offloading.</p>
+              </div>
+              <label class="switch-control">
+                <input type="checkbox" id="modAlb" checked>
+                <span class="switch-track"></span>
+              </label>
+            </div>
+            <button class="accordion-toggle-btn" type="button">
+              <span>Technical Specification &amp; FinOps Proof</span>
+              <span class="accordion-arrow">&#9662;</span>
+            </button>
+            <div class="accordion-details-body">
+              <div class="detail-clause">
+                <span class="clause-header">Engineering Justification</span>
+                <p class="clause-text">Cryptographic TLS handshakes consume 22–30% of application server CPU cycles. Offloading to specialized hardware ensures 100% of compute capacity executes transactional application logic.</p>
+              </div>
+              <div class="detail-clause">
+                <span class="clause-header">FinOps ROI Metric</span>
+                <p class="clause-text">Prevents premature vertical compute tier upgrades; guarantees continuous 99.99% multi-zone ingress availability.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Aurora Multi-AZ -->
+          <div class="service-card-item active" id="cardRds">
+            <div class="service-header-bar">
+              <div class="service-identity">
+                <div class="service-title-row">
+                  <span class="service-title-text">Amazon Aurora PostgreSQL Multi-AZ</span>
+                  <span class="service-subhead-pill">Quorum-Engineered Storage</span>
+                </div>
+                <p class="service-synopsis">Cloud-native log-structured distributed database engine replicating data 6 ways across 3 AZs.</p>
+              </div>
+              <label class="switch-control">
+                <input type="checkbox" id="modRds" checked>
+                <span class="switch-track"></span>
+              </label>
+            </div>
+            <button class="accordion-toggle-btn" type="button">
+              <span>Technical Specification &amp; FinOps Proof</span>
+              <span class="accordion-arrow">&#9662;</span>
+            </button>
+            <div class="accordion-details-body">
+              <div class="detail-clause">
+                <span class="clause-header">Engineering Justification</span>
+                <p class="clause-text">Decouples compute from storage, achieving commit write latency under 10ms with autonomous sub-30s crash failover without write-ahead-log replication lag.</p>
+              </div>
+              <div class="detail-clause">
+                <span class="clause-header">FinOps ROI Metric</span>
+                <p class="clause-text">Mitigates data loss liability ($5,600/min industry downtime cost) and guarantees full compliance under PCI-DSS 4.0 and GDPR Article 32.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. ElastiCache Redis -->
+          <div class="service-card-item active" id="cardRedis">
+            <div class="service-header-bar">
+              <div class="service-identity">
+                <div class="service-title-row">
+                  <span class="service-title-text">Amazon ElastiCache Redis Cluster</span>
+                  <span class="service-subhead-pill">Read-Aside Sub-Millisecond Cache</span>
+                </div>
+                <p class="service-synopsis">In-memory volatile key-value store intercepting session state, auth tokens, and catalog reads.</p>
+              </div>
+              <label class="switch-control">
+                <input type="checkbox" id="modRedis" checked>
+                <span class="switch-track"></span>
+              </label>
+            </div>
+            <button class="accordion-toggle-btn" type="button">
+              <span>Technical Specification &amp; FinOps Proof</span>
+              <span class="accordion-arrow">&#9662;</span>
+            </button>
+            <div class="accordion-details-body">
+              <div class="detail-clause">
+                <span class="clause-header">Engineering Justification</span>
+                <p class="clause-text">Absorbs 75–85% of repeated read transactions directly in memory, keeping transactional database connection pools below saturation thresholds during surge periods.</p>
+              </div>
+              <div class="detail-clause">
+                <span class="clause-header">FinOps ROI Metric</span>
+                <p class="clause-text">A $70/mo managed Redis node replaces an otherwise mandatory $350/mo database compute scale-up, generating net architectural savings.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. CloudFront & S3 -->
+          <div class="service-card-item active" id="cardCdn">
+            <div class="service-header-bar">
+              <div class="service-identity">
+                <div class="service-title-row">
+                  <span class="service-title-text">Amazon CloudFront CDN &amp; S3 Storage</span>
+                  <span class="service-subhead-pill">Edge Origin Shield</span>
+                </div>
+                <p class="service-synopsis">Global asset distribution across 450+ Points of Presence with edge caching and Brotli compression.</p>
+              </div>
+              <label class="switch-control">
+                <input type="checkbox" id="modCdn" checked>
+                <span class="switch-track"></span>
+              </label>
+            </div>
+            <button class="accordion-toggle-btn" type="button">
+              <span>Technical Specification &amp; FinOps Proof</span>
+              <span class="accordion-arrow">&#9662;</span>
+            </button>
+            <div class="accordion-details-body">
+              <div class="detail-clause">
+                <span class="clause-header">Engineering Justification</span>
+                <p class="clause-text">Terminates TCP/HTTP keep-alive connections at nearest edge nodes, eliminating origin bandwidth choking and preventing thread starvation.</p>
+              </div>
+              <div class="detail-clause">
+                <span class="clause-header">FinOps ROI Metric</span>
+                <p class="clause-text">Replaces high VPC egress tariffs ($0.09/GB) with tiered edge bandwidth pricing.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. WAF & Shield -->
+          <div class="service-card-item active" id="cardWaf">
+            <div class="service-header-bar">
+              <div class="service-identity">
+                <div class="service-title-row">
+                  <span class="service-title-text">AWS WAF &amp; Shield Perimeter Security</span>
+                  <span class="service-subhead-pill">Layer-7 Token-Bucket Rate Limiting</span>
+                </div>
+                <p class="service-synopsis">Heuristic HTTP inspection blocking OWASP Top 10 exploits, credential stuffing, and bot scrapers.</p>
+              </div>
+              <label class="switch-control">
+                <input type="checkbox" id="modWaf" checked>
+                <span class="switch-track"></span>
+              </label>
+            </div>
+            <button class="accordion-toggle-btn" type="button">
+              <span>Technical Specification &amp; FinOps Proof</span>
+              <span class="accordion-arrow">&#9662;</span>
+            </button>
+            <div class="accordion-details-body">
+              <div class="detail-clause">
+                <span class="clause-header">Engineering Justification</span>
+                <p class="clause-text">Drops malicious or scraper traffic at the network edge before requests execute backend application logic or consume database connections.</p>
+              </div>
+              <div class="detail-clause">
+                <span class="clause-header">FinOps ROI Metric</span>
+                <p class="clause-text">Directly suppresses artificial autoscaling triggers caused by automated bot crawling.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. NAT Gateway -->
+          <div class="service-card-item active" id="cardNat">
+            <div class="service-header-bar">
+              <div class="service-identity">
+                <div class="service-title-row">
+                  <span class="service-title-text">AWS Managed NAT Gateway &amp; PrivateLink</span>
+                  <span class="service-subhead-pill">Zero-Trust Subnet Isolation</span>
+                </div>
+                <p class="service-synopsis">Encapsulates application runtimes and databases strictly within private subnets without public IPs.</p>
+              </div>
+              <label class="switch-control">
+                <input type="checkbox" id="modNat" checked>
+                <span class="switch-track"></span>
+              </label>
+            </div>
+            <button class="accordion-toggle-btn" type="button">
+              <span>Technical Specification &amp; FinOps Proof</span>
+              <span class="accordion-arrow">&#9662;</span>
+            </button>
+            <div class="accordion-details-body">
+              <div class="detail-clause">
+                <span class="clause-header">Engineering Justification</span>
+                <p class="clause-text">Prohibits all unsolicited ingress from the public Internet while permitting controlled egress for dependency updates and telemetry.</p>
+              </div>
+              <div class="detail-clause">
+                <span class="clause-header">FinOps ROI Metric</span>
+                <p class="clause-text">Mandatory technical audit control for SOC2 Type II, ISO 27001, and Zero Trust certification.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. CloudWatch & X-Ray -->
+          <div class="service-card-item active" id="cardCw">
+            <div class="service-header-bar">
+              <div class="service-identity">
+                <div class="service-title-row">
+                  <span class="service-title-text">Amazon CloudWatch &amp; AWS X-Ray APM</span>
+                  <span class="service-subhead-pill">Distributed Trace Propagation</span>
+                </div>
+                <p class="service-synopsis">Full-stack distributed tracing and metric anomaly detection with millisecond root-cause localization.</p>
+              </div>
+              <label class="switch-control">
+                <input type="checkbox" id="modCw" checked>
+                <span class="switch-track"></span>
+              </label>
+            </div>
+            <button class="accordion-toggle-btn" type="button">
+              <span>Technical Specification &amp; FinOps Proof</span>
+              <span class="accordion-arrow">&#9662;</span>
+            </button>
+            <div class="accordion-details-body">
+              <div class="detail-clause">
+                <span class="clause-header">Engineering Justification</span>
+                <p class="clause-text">Propagates W3C Trace Context headers across services to identify lock contention, slow database queries, and third-party API stalls.</p>
+              </div>
+              <div class="detail-clause">
+                <span class="clause-header">FinOps ROI Metric</span>
+                <p class="clause-text">Reduces Mean Time to Resolution (MTTR) by 65%, preventing recurring revenue degradation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. AWS Backup -->
+          <div class="service-card-item active" id="cardBackup">
+            <div class="service-header-bar">
+              <div class="service-identity">
+                <div class="service-title-row">
+                  <span class="service-title-text">AWS Backup Immutable Vault</span>
+                  <span class="service-subhead-pill">WORM Policy Orchestration</span>
+                </div>
+                <p class="service-synopsis">Centralized write-once-read-many immutable snapshot vault with KMS encryption key separation.</p>
+              </div>
+              <label class="switch-control">
+                <input type="checkbox" id="modBackup" checked>
+                <span class="switch-track"></span>
+              </label>
+            </div>
+            <button class="accordion-toggle-btn" type="button">
+              <span>Technical Specification &amp; FinOps Proof</span>
+              <span class="accordion-arrow">&#9662;</span>
+            </button>
+            <div class="accordion-details-body">
+              <div class="detail-clause">
+                <span class="clause-header">Engineering Justification</span>
+                <p class="clause-text">Enforces retention rules that cannot be altered or deleted even by privileged root credentials, guaranteeing disaster recovery.</p>
+              </div>
+              <div class="detail-clause">
+                <span class="clause-header">FinOps ROI Metric</span>
+                <p class="clause-text">Assures RPO &lt; 1 hour and RTO &lt; 15 minutes, neutralizing corporate ransomware threats.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Sticky TCO & Mathematical Audits -->
+    <div class="workspace-sidebar sticky-column">
+      <!-- Audit Hazard Card -->
+      <div id="hazardAuditBox" class="audit-alert-panel">
+        <div class="audit-top-line">
+          <span id="auditFlag" class="audit-tag">Mathematical Audit</span>
+          <span id="auditCode" class="audit-code-badge">VERIFIED_RESILIENT</span>
+        </div>
+        <h4 id="auditTitle" class="audit-title">Deterministic Architecture Verified</h4>
+        <p id="auditMetricDesc" class="audit-details-text">Prescribed allocation satisfies all P95 throughput and memory constraints with zero burstable credit debt.</p>
+        <button id="btnEnforceSafe" class="btn-enforce-optimal" style="display: none;">Enforce Prescribed Allocation</button>
+      </div>
+
+      <!-- TCO Financial Ledger Card -->
+      <div class="tco-ledger-card">
+        <div class="ledger-header-row">
+          <h3 class="ledger-heading">Total Cost of Ownership (TCO)</h3>
+          <span class="ledger-curr-tag">USD ($) Multi-Horizon</span>
+        </div>
+
+        <!-- Time Horizon Segmented Control -->
+        <div class="time-segmented-bar" id="horizonTabs">
+          <button class="time-segment-btn" data-horizon="1_week">1 Week</button>
+          <button class="time-segment-btn" data-horizon="2_weeks">2 Weeks</button>
+          <button class="time-segment-btn active" data-horizon="1_month">1 Month</button>
+          <button class="time-segment-btn" data-horizon="3_months">3 Months</button>
+        </div>
+
+        <!-- Big Price Display -->
+        <div class="price-showcase">
+          <div class="price-digits-row">
+            <span class="price-currency">$</span>
+            <span id="priceValue" class="price-big-number">1,250.64</span>
+          </div>
+          <span id="horizonLabel" class="price-sub-caption">per 1 Month (On-Demand)</span>
+        </div>
+
+        <!-- Savings Plan Callout -->
+        <div class="savings-callout">
+          <div class="savings-plan-line">
+            <span>1-Year Compute Savings Plan:</span>
+            <strong>$<span id="savingsPlanPrice">1,151.00</span></strong>
+          </div>
+          <div class="savings-delta-line">
+            <span>Deterministic Capital Savings:</span>
+            <span>$<span id="savingsDeltaPrice">99.64</span> (<span id="savingsPercent">8%</span>)</span>
+          </div>
+        </div>
+
+        <!-- Allocation Progress Bar -->
+        <div class="allocation-breakdown-box">
+          <div class="allocation-heading">Capital Allocation Breakdown:</div>
+          <div class="stacked-track">
+            <div id="barCompute" class="seg-compute" style="width: 25%;"></div>
+            <div id="barStorage" class="seg-storage" style="width: 10%;"></div>
+            <div id="barNetwork" class="seg-network" style="width: 8%;"></div>
+            <div id="barServices" class="seg-services" style="width: 57%;"></div>
+          </div>
+
+          <div class="legend-grid">
+            <div class="legend-line">
+              <div class="legend-left">
+                <span class="marker marker-compute"></span>
+                <span>Dedicated Primary Compute:</span>
+              </div>
+              <strong id="costCompute">$311.51</strong>
+            </div>
+            <div class="legend-line">
+              <div class="legend-left">
+                <span class="marker marker-storage"></span>
+                <span>Storage (EBS gp3 + Snapshots):</span>
+              </div>
+              <strong id="costStorage">$14.45</strong>
+            </div>
+            <div class="legend-line">
+              <div class="legend-left">
+                <span class="marker marker-network"></span>
+                <span>Network Egress &amp; CDN Bandwidth:</span>
+              </div>
+              <strong id="costNetwork">$30.79</strong>
+            </div>
+            <div class="legend-line">
+              <div class="legend-left">
+                <span class="marker marker-services"></span>
+                <span>Companion Architecture Modules:</span>
+              </div>
+              <strong id="costManaged">$893.89</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Itemized Modules Ledger -->
+        <div class="itemized-breakdown-box">
+          <div class="itemized-caption">Active Architecture Breakdown:</div>
+          <ul id="itemizedList" class="itemized-rows">
+            <!-- Populated via JS -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Dialog: Terraform HCL -->
+  <div id="tfModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div class="modal-box-header">
+        <h3>Deterministic Infrastructure as Code Specification</h3>
+        <button id="btnCloseModal" class="modal-close">&times;</button>
+      </div>
+      <div class="modal-box-body">
+        <p style="font-size: 0.82rem; color: #52525b; margin-bottom: 12px;">Production Terraform manifest reflecting synthesized compute and multi-zone architectural controls:</p>
+        <pre><code id="tfCodeBlock"># Synthesizing HCL...</code></pre>
+      </div>
+      <div class="modal-box-footer">
+        <button id="btnCopyTf" class="btn-pill-dark">Copy HCL Manifest</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=1795166635024"></script>
+</body>
+</html>

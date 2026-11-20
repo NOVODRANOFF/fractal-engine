@@ -1,0 +1,13 @@
+{
+  "name": "fractal-engine",
+  "version": "1.0.0",
+  "description": "FRACTAL Engine: Deterministic AWS SRE Sizing, TCO Predictor & Architecture Advisory",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": ["aws", "ec2", "tco-calculator", "sizing", "cloud-architecture"],
+  "author": "Antigravity Cloud Architecture",
+  "license": "MIT"
+}
